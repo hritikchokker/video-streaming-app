@@ -5,24 +5,15 @@ import  StreamEdit  from './streams/streamEdit';
 import  StreamShow  from './streams/streamShow';
 import  StreamList  from './streams/streamList';
 import StreamCreate from './streams/streamCreate';
+import Header from './Header';
 
-// const PageOne = () => {
-//     return <div> PageOne
-//         <Link to="/pagetwo">Navigate To Page Two</Link>
-//     </div>
-// }
-
-
-// const PageTow = () => {
-//     return <div> PageTwo
-//     <Link to="/">Navigate To Page One</Link>
-//     </div>
-// }
 
 const App =  () =>{
     return (
-        <div>
+        <div className="ui container">
             <BrowserRouter>
+        <div>
+        <Header />
             <Route path="/" exact component={StreamList} />
             <Route path="/streams/new" exact component={StreamCreate} />
              <Route path="/streams/edit" exact component={StreamEdit} />
@@ -30,6 +21,7 @@ const App =  () =>{
              <Route path="/streams/show" exact component={StreamShow} />
                 {/* <Route path="/" exact component={PageOne} />
                 <Route path="/pagetwo" component={PageTow} /> */}
+        </div>
             </BrowserRouter>
         </div>
     )
