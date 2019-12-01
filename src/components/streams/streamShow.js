@@ -2,7 +2,7 @@ import React from 'react';
 
 const StreamShow = () => {
     return (
-        <div>StreamShow</div>
+        <div>Stream Show</div>
     )
 }
 export default StreamShow;
