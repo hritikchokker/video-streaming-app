@@ -1,8 +1,21 @@
 import React from 'react';
+import {connect} from 'react-redux';
+import {fetchStreams} from '../../actions';
 
-const StreamShow = () => {
-    return (
-        <div>Stream List</div>
-    )
+// const StreamList = () => {
+//     return (
+//         <div>Stream List</div>
+//     )
+// }
+
+class StreamList extends React.Component {
+    componentDidMount(){
+        this.props.fetchStreams();
+    }
+    render() {
+        return (
+            <div> StreamList</div>
+        )
+    }
 }
-export default StreamShow;
+export default connect(null,{fetchStreams})(StreamList);
